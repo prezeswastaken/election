@@ -39,8 +39,13 @@ const chartOptions = {
 </script>
 
 <template>
-  <div>
-    <Doughnut :data="chartData" :options="chartOptions" />
+  <div class="flex gap-32 justify-center items-center">
+    <div>
+      <Bar class="w-96" :data="chartData" :options="chartOptions" />
+    </div>
+    <div>
+      <Doughnut class="w-72" :data="chartData" :options="chartOptions" />
+    </div>
   </div>
 </template>
 

@@ -9,7 +9,7 @@ import (
 
 func main() {
 	initializers.ConnectToDB()
-	//initializers.Migrate()
+	initializers.Migrate()
 
 	app := fiber.New()
 	app.Use(cors.New())

@@ -38,7 +38,6 @@ async function fetchContestants() {
         v-if="contestantsFetched"
         :names="contestants.map((contestant) => contestant.name)"
         :scores="contestants.map((contestant) => contestant.score)"
-        type="pie"
       />
     </div>
   </div>
