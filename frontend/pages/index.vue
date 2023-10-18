@@ -31,8 +31,9 @@ async function fetchContestants() {
 
 <template>
   <div
-    class="flex flex-col justify-center items-center min-h-screen text-white bg-slate-950"
+    class="flex flex-col gap-10 justify-center items-center min-h-screen font-serif text-white uppercase bg-slate-950"
   >
+    <h1 class="mb-5 text-7xl">Wyniki wyborów do sejmu 2023</h1>
     <div class="flex gap-5">
       <Chart
         v-if="contestantsFetched"

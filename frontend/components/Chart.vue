@@ -11,7 +11,7 @@ const chartData = ref({
   labels: props.names,
   datasets: [
     {
-      label: "Score (%)",
+      label: "Wynik (%)",
       data: props.scores,
       backgroundColor: [
         "#c6a0f6",
@@ -22,7 +22,6 @@ const chartData = ref({
         "#7dc4e4",
         "#f5bde6",
       ],
-      color: "#cad3f5",
       hoverOffset: 50,
     },
   ],
@@ -31,7 +30,7 @@ const chartOptions = {
   plugins: {
     legend: {
       labels: {
-        color: "#FFFFFF",
+        color: "#cad3f5",
       },
     },
   },
