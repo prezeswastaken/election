@@ -6,7 +6,10 @@ import {
   BarElement,
   CategoryScale,
   LinearScale,
+  ArcElement,
+  PieController,
 } from "chart.js";
+
 export default defineNuxtPlugin((nuxtApp) => {
   Chart.register(
     CategoryScale,
@@ -15,5 +18,7 @@ export default defineNuxtPlugin((nuxtApp) => {
     Title,
     Tooltip,
     Legend,
+    ArcElement,
+    PieController,
   );
 });
