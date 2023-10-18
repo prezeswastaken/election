@@ -1,10 +1,21 @@
 <script lang="ts" setup>
+import { Bar } from "vue-chartjs";
 const props = defineProps({
   names: Array<String>,
   scores: Array<Number>,
   type: String,
 });
 
+const chartData = ref({
+  labels: props.names,
+  datasets: [
+    {
+      label: "Score (%)",
+      backgroundColor: "#8bd5ca",
+      data: props.scores,
+    },
+  ],
+});
 // Define your chart configuration
 let chartConfig = {
   type: props.type,
@@ -27,7 +38,9 @@ let url = `https://quickchart.io/chart?c=${chartConfigJson}`;
 </script>
 
 <template>
-  <div><img class="w-72" :src="url" /></div>
+  <div>
+    <Bar :data="chartData" />
+  </div>
 </template>
 
 <style scoped></style>

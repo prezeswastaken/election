@@ -42,12 +42,6 @@ async function fetchContestants() {
         :scores="contestants.map((contestant) => contestant.score)"
         type="pie"
       />
-      <PieChart
-        v-if="contestantsFetched"
-        :names="contestants.map((contestant) => contestant.name)"
-        :scores="contestants.map((contestant) => contestant.score)"
-        type="line"
-      />
     </div>
     <div v-for="contestant in contestants" :key="contestant.id">
       {{ contestant.name }}
