@@ -9,6 +9,10 @@ const contestantsFetched = ref(false);
 
 const contestants: Ref<Contestant[]> = ref([]);
 
+onMounted(() => {
+  fetchContestants();
+});
+
 async function fetchContestants() {
   const { data, error } = await useFetch(
     "http://localhost:8000/api/contestants",
@@ -29,12 +33,6 @@ async function fetchContestants() {
   <div
     class="flex flex-col justify-center items-center min-h-screen text-white bg-slate-950"
   >
-    <button
-      class="p-3 m-10 text-white bg-black rounded-3xl duration-300 hover:text-green-500"
-      @click="fetchContestants"
-    >
-      SHOW RESULTS
-    </button>
     <div class="flex gap-5">
       <Chart
         v-if="contestantsFetched"
