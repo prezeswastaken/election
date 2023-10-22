@@ -16,6 +16,7 @@ func main() {
 
 	app.Get("/api/contestants", handlers.ListContestants)
 	app.Post("/api/contestants/create", handlers.CreateContestant)
+	app.Delete("/api/contestants/:id", handlers.DeleteContestant)
 
 	app.Listen(":8000")
 }

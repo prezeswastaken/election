@@ -15,6 +15,11 @@ async function handleSubmit() {
       body: { ...form.value, score: parseFloat(form.value.score) },
     },
   );
+  form.value = {
+    name: "",
+    score: "",
+  };
+
   console.log(response);
 }
 </script>
@@ -35,7 +40,9 @@ async function handleSubmit() {
         class="py-3 px-5 rounded-lg border border-white bg-slate-950"
       />
     </label>
-    <button type="submit">SUBMIT</button>
+    <button class="duration-300 hover:text-green-500" type="submit">
+      SUBMIT
+    </button>
   </form>
 </template>
 

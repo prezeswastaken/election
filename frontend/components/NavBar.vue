@@ -3,7 +3,7 @@
 <template>
   <div class="flex gap-20 justify-between">
     <NavLink link="/create" text="create" />
-    <NavLink link="/update" text="update" />
+    <NavLink link="/delete" text="delete" />
   </div>
 </template>
 
